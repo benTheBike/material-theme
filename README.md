@@ -28,11 +28,7 @@ Add either using ```git clone```:
 $ cd MyBlog
 $ git clone https://github.com/benTheBike/material-theme.git themes/material-theme
 ```
-Or adding as git submodule:
-```
-$ cd MyBlog
-$ git submodule add https://github.com/benTheBike/material-theme.git themes/material-theme
-```
+
 ### 3. Change config.yml
 In your site's config file (```/MyBlog/_config.yml```), change the value of ```theme``` to ```material-theme```.
 
