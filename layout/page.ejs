@@ -1,0 +1,6 @@
+<h3><%- page.title %></h3>
+<%- page.content %>
+<%- partial("_partials/share.ejs") %>
+<p class="page-date">
+    <b>Page last updated:</b> <%= date(page.date, config.date_format) %></span>
+</p>

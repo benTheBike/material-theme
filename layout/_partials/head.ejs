@@ -1,0 +1,12 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="<%= theme.theme_color %>">
+<meta name="author" content="<%= config.author %>">
+<meta name="description" content="<%= config.description %>">
+<%- favicon_tag(theme.favicon_path) %>
+<%- css("css/styles.css") %>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<% if (theme.hljs_css) { %><link href="<%= theme.hljs_css %>" type="text/css" rel="stylesheet"><% } %>
+<% if (theme.mdl_css) { %><link href="<%= theme.mdl_css %>" type="text/css" rel="stylesheet"><% } %>
+<% if (theme.google_analytics_id) { %><%- partial("_partials/google_analytics.ejs") %><% } %>
+<title><%= config.title %></title>

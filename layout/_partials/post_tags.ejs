@@ -1,0 +1,20 @@
+<div id="post-tags">
+    <button class="post-btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" onclick="showTags()">Tags</button>
+    <button class="post-btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="showCategories()">Categories</button>
+    <a class="post-btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" href="https://www.addtoany.com/share"><i class="material-icons">share</i> Share </a>
+    <br><br>
+    <span id="tags-list">
+        <span class="tag-chip">Tags: </span>
+        <% if (page.tags && page.tags.length) { %>
+            <% page.tags.each(function(tag) { %>
+                <span class="mdl-chip tag-chip">
+                    <span class="mdl-chip__text">
+                        <a href="<%- url_for(tag.path) %>"><%- tag.name %></a>
+                    </span>
+                </span>
+            <% }) %>
+        <% } else { %>
+            <span style="font-weight: bold; font-style: italic;">No tags.</span>
+        <% } %>
+    </span>
+</div>

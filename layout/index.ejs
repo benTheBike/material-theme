@@ -1,0 +1,60 @@
+<span class="index-top">
+    <h2 style="margin-bottom: 4px;"></h2>
+    <p class="index-desc"><%= config.description %></p>
+</span>
+<h3>Posts</h3>
+<span class="index-posts-list">
+    <% page.posts.each(function(post) { %>
+        <% if (post.layout === "link") { %>
+            <span class="index-posts-list__post">
+                <h4 class="index-posts-list__post-title">
+                    <a target="_blank" rel="noopener" href="<%= post.url %>"><%= post.title %></a>
+                </h4>
+                <span class="index-posts-list__post-date">
+                    <% if (post.date) { %>
+                        <i class="material-icons">today</i>
+                        <%= date(post.date, config.date_format) %>
+                    <% } %>
+                </span>
+            </span>
+        <% } else { %>
+            <span class="index-posts-list__post">
+                <h4 class=" index-posts-list__post-title">
+                    <a href="<%- url_for(post.path) %>"><%= post.title %></a>
+                </h4>
+                <% if (post.layout === "image") { %>
+                    <img class="image-post--thumbnail"src="<%= post.thumbnail %>">    
+                <% } %>
+                <span class="index-posts-list__post-author">
+                    <% if (config.author) { %>
+                        <i class="material-icons">person_outline</i>
+                        <%= config.author %>
+                    <% } %>
+                </span>
+                <span class="index-posts-list__post-date">
+                    <% if (post.date) { %>
+                        <i class="material-icons">today</i>
+                        <%= date(post.date, config.date_format) %>
+                    <% } %>
+                </span>
+                <span class="index-posts-list__post-tags">
+                    <% if (post.categories && post.categories.length) { %>
+                        <i class="material-icons">folder_open</i>
+                        <%- list_categories(post.categories, {
+                            show_count: false,
+                            class: 'post-category-index',
+                            seperator: ',',
+                            style: 'none'
+                        }); %>
+                    <% } %>
+                </span>
+                <p class="index-posts-list__post-excerpt">
+                    <% if (post.excerpt) { %>
+                        <%- post.excerpt %>
+                        ... <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary" href="<%- url_for(post.path) %>">Read more</a> 
+                    <% } else { %><span style="padding-bottom: 5px;"></span><% } %> 
+                </p>
+            </span>
+        <% } %>
+    <% }) %>
+</span>

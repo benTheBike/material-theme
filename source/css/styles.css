@@ -1,0 +1,82 @@
+body {
+    font-family: "Arial", sans-serif !important;
+}
+
+#content-main {
+    margin: 10px;
+    line-height: 1.4;
+    color: black;
+}
+
+.highlight {
+    display: table !important; /* inline block but w/ line breaks */
+    background-color: #BDBDBD;
+}
+
+.highlight table {
+    padding: 3px;
+}
+
+/* Commented out because highlightjs takes care of it
+/* (highlighted) codeblocks 
+.highlight table {
+    background-color: #E0E0E0   ;
+    padding: 2px;
+}
+
+/* line numbers 
+.highlight .gutter {
+    background-color: #BDBDBD;
+}
+*/
+
+.highlight .gutter {
+    padding-right: 2px;
+    font-weight: bold;
+}
+
+#post-tags {
+    display: inline-block;
+    padding: 3px;
+}
+
+#tags-menu {
+   display: inline !important;
+}
+
+#categories-menu {
+    display: inline !important;
+}
+
+#tags-list { visibility: hidden; }
+#categories-list { visibility: hidden; }
+
+#post-meta { padding-bottom: 15px; }
+
+#nav-home-link { /* remove link styling */
+    text-decoration: none;
+    color: inherit;
+}
+
+.post-meta--item {
+    padding-left: 3px;
+    padding-right: 3px;    
+}
+
+.post-spacer-x {
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.image-post--thumbnail {
+    width: 100px;
+    height: auto;
+}
+
+.post-btn {
+    margin-right: 10px !important;
+}
+
+.share-btn {
+    
+}

@@ -1,0 +1,12 @@
+<footer class="mdl-mini-footer">
+    <div class="mdl-mini-footer__left-section">
+        <div class="mdl-logo"><%= theme.footer_title %></div>
+        <ul class="mdl-mini-footer__link-list">
+            <% for (var i in theme.footer_items) { %>
+                <li>
+                    <a href="<%- url_for(theme.footer_items[i]) %>"><%= i %></a>
+                </li>
+            <% } %>
+        </ul>
+    </div>    
+</footer>

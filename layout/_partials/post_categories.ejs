@@ -1,0 +1,16 @@
+<div id="post-categories">
+    <span id="categories-list">
+        <span class="category-chip">Categories: </span>
+        <% if (page.categories && page.categories.length) { %>
+            <% page.categories.each(function(category) { %>
+                <span class="mdl-chip category-chip">
+                    <span class="mdl-chip__text">
+                        <a href="<%- url_for(category.path) %>"><%- category.name %></a>
+                    </span>
+                </span>
+            <% }) %>
+        <% } else { %>
+            <span style="font-weight: bold; font-style: italic;">No categories.</span>
+        <% } %>
+    </span>
+</div>
