@@ -1,8 +1,6 @@
 # material-theme
 A material design theme for use with Hexo sites.
 
-## See preview site - [ben.bike/hexo-themes/material-theme](https://ben.bike/hexo-themes/material-theme/)
-
 ## Features
 - Clean material design
 - Syntax highlighting for code blocks
