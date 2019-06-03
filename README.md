@@ -24,7 +24,7 @@ $ npm install
 Add either using ```git clone```:
 ```
 $ cd MyBlog
-$ git clone https://github.com/benTheBike/material-theme.git themes/material-theme
+$ git clone https://github.com/bendotbike/material-theme.git themes/material-theme
 ```
 
 ### 3. Change config.yml
